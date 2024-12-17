@@ -27,7 +27,7 @@
     "name": "Dell XPS 13",
     "description": "Compact and powerful laptop with a stunning 13.4-inch display and long battery life.",
     "category": "Computers",
-    "quantity": 5,
+    "quantity": 0,
     "unit": "pcs",
     "image": ""
   },
@@ -36,6 +36,54 @@
     "description": "The most advanced Apple Watch with larger display and new health features.",
     "category": "Wearables",
     "quantity": 12,
+    "unit": "pcs",
+    "image": ""
+  },
+  {
+    "name": "Amazon Echo Dot",
+    "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
+    "category": "Smart Home",
+    "quantity": 25,
+    "unit": "pcs",
+    "image": ""
+  },
+  {
+    "name": "Amazon Echo Dot",
+    "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
+    "category": "Smart Home",
+    "quantity": 25,
+    "unit": "pcs",
+    "image": ""
+  },
+  {
+    "name": "Amazon Echo Dot",
+    "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
+    "category": "Smart Home",
+    "quantity": 25,
+    "unit": "pcs",
+    "image": ""
+  },
+  {
+    "name": "Amazon Echo Dot",
+    "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
+    "category": "Smart Home",
+    "quantity": 25,
+    "unit": "pcs",
+    "image": ""
+  },
+  {
+    "name": "Amazon Echo Dot",
+    "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
+    "category": "Smart Home",
+    "quantity": 25,
+    "unit": "pcs",
+    "image": ""
+  },
+  {
+    "name": "Amazon Echo Dot",
+    "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
+    "category": "Smart Home",
+    "quantity": 25,
     "unit": "pcs",
     "image": ""
   },
