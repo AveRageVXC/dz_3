@@ -2,7 +2,7 @@
   {
     "name": "Apple iPhone 13",
     "description": "The latest iPhone with A15 Bionic chip, 5G speed, and improved camera system.",
-    "category": "Electronics",
+    "category": "0",
     "quantity": 15,
     "unit": "pcs",
     "image": ""
@@ -10,7 +10,7 @@
   {
     "name": "Samsung Galaxy S21",
     "description": "Experience the new Samsung Galaxy S21 with its stunning display and powerful performance.",
-    "category": "Electronics",
+    "category": "0",
     "quantity": 8,
     "unit": "pcs",
     "image": ""
@@ -18,7 +18,7 @@
   {
     "name": "Sony WH-1000XM4",
     "description": "Industry-leading noise canceling headphones with exceptional sound quality.",
-    "category": "Audio",
+    "category": "1",
     "quantity": 20,
     "unit": "pcs",
     "image": ""
@@ -26,7 +26,7 @@
   {
     "name": "Dell XPS 13",
     "description": "Compact and powerful laptop with a stunning 13.4-inch display and long battery life.",
-    "category": "Computers",
+    "category": "2",
     "quantity": 0,
     "unit": "pcs",
     "image": ""
@@ -34,7 +34,7 @@
   {
     "name": "Apple Watch Series 7",
     "description": "The most advanced Apple Watch with larger display and new health features.",
-    "category": "Wearables",
+    "category": "3",
     "quantity": 12,
     "unit": "pcs",
     "image": ""
@@ -42,7 +42,7 @@
   {
     "name": "Amazon Echo Dot",
     "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
-    "category": "Smart Home",
+    "category": "4",
     "quantity": 25,
     "unit": "pcs",
     "image": ""
@@ -50,7 +50,7 @@
   {
     "name": "Amazon Echo Dot",
     "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
-    "category": "Smart Home",
+    "category": "4",
     "quantity": 25,
     "unit": "pcs",
     "image": ""
@@ -58,7 +58,7 @@
   {
     "name": "Amazon Echo Dot",
     "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
-    "category": "Smart Home",
+    "category": "4",
     "quantity": 25,
     "unit": "pcs",
     "image": ""
@@ -66,7 +66,7 @@
   {
     "name": "Amazon Echo Dot",
     "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
-    "category": "Smart Home",
+    "category": "4",
     "quantity": 25,
     "unit": "pcs",
     "image": ""
@@ -74,7 +74,7 @@
   {
     "name": "Amazon Echo Dot",
     "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
-    "category": "Smart Home",
+    "category": "4",
     "quantity": 25,
     "unit": "pcs",
     "image": ""
@@ -82,7 +82,7 @@
   {
     "name": "Amazon Echo Dot",
     "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
-    "category": "Smart Home",
+    "category": "4",
     "quantity": 25,
     "unit": "pcs",
     "image": ""
@@ -90,7 +90,7 @@
   {
     "name": "Amazon Echo Dot",
     "description": "Smart speaker with Alexa, perfect for any room. Voice control your music and smart home devices. The Echo Dot is designed to fit anywhere in your home. You can place it in the bedroom, living room, or kitchen. It has a sleek and compact design that blends seamlessly with your decor. With Alexa, you can ask for the weather, set alarms, control smart home devices, and much more. The Echo Dot also features improved sound quality, making it great for listening to music, audiobooks, and podcasts.",
-    "category": "Smart Home",
+    "category": "4",
     "quantity": 25,
     "unit": "pcs",
     "image": ""

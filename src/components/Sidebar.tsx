@@ -1,12 +1,39 @@
 import React, { useState } from 'react';
-import { TextField, Checkbox, FormControlLabel, Select, MenuItem, Button, Box, Drawer, IconButton, InputAdornment } from '@mui/material';
+import {
+    TextField,
+    Checkbox,
+    FormControlLabel,
+    Select,
+    MenuItem,
+    Button,
+    Box,
+    Drawer,
+    IconButton,
+    InputAdornment,
+} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ClearIcon from '@mui/icons-material/Clear';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 
-const Sidebar: React.FC<{ isOpen: boolean, onFilter: (filters: { searchText: string, nonZeroQuantity: boolean, category: string }) => void, onClose: () => void, categories: string[] }> = ({ isOpen, onFilter, onClose, categories }) => {
+export interface Category {
+    id: number;
+    name: string;
+}
+
+interface SidebarProps {
+    isOpen: boolean;
+    onFilter: (filters: { searchText: string; nonZeroQuantity: boolean; category: number | '' }) => void;
+    onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onFilter, onClose }) => {
     const [searchText, setSearchText] = useState('');
     const [nonZeroQuantity, setNonZeroQuantity] = useState(false);
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState<number | ''>('');
+
+    // Выбираем список категорий из redux-хранилища
+    const categories = useSelector((state: RootState) => state.categories.categories);
 
     const handleSearch = () => {
         onFilter({ searchText, nonZeroQuantity, category });
@@ -30,7 +57,7 @@ const Sidebar: React.FC<{ isOpen: boolean, onFilter: (filters: { searchText: str
     };
 
     return (
-        <Drawer anchor="left" open={isOpen} onClose={onClose} variant="persistent" sx={{ zIndex: 1}}>
+        <Drawer anchor="left" open={isOpen} onClose={onClose} variant="persistent" sx={{ zIndex: 1 }}>
             <Box sx={{ width: 250, padding: 2, marginTop: '64px' }}>
                 <IconButton onClick={onClose} sx={{ float: 'right' }}>
                     <CloseIcon />
@@ -40,14 +67,14 @@ const Sidebar: React.FC<{ isOpen: boolean, onFilter: (filters: { searchText: str
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                     fullWidth
-                    InputAdornment={{
+                    InputProps={{
                         endAdornment: (
                             <InputAdornment position="end">
                                 <IconButton onClick={handleResetSearchText}>
                                     <ClearIcon />
                                 </IconButton>
                             </InputAdornment>
-                        )
+                        ),
                     }}
                 />
                 <FormControlLabel
@@ -61,7 +88,14 @@ const Sidebar: React.FC<{ isOpen: boolean, onFilter: (filters: { searchText: str
                 />
                 <Select
                     value={category}
-                    onChange={(e) => setCategory(e.target.value)}
+                    onChange={(e) => {
+                        const value = e.target.value;
+                        if (value === '') {
+                            setCategory('');
+                        } else {
+                            setCategory(Number(value));
+                        }
+                    }}
                     displayEmpty
                     fullWidth
                     endAdornment={
@@ -75,12 +109,15 @@ const Sidebar: React.FC<{ isOpen: boolean, onFilter: (filters: { searchText: str
                     <MenuItem value="">
                         <em>Выберите категорию</em>
                     </MenuItem>
-                    {categories.map((cat, index) => (
-                        <MenuItem key={index} value={cat}>{cat}</MenuItem>
+                    {categories.map((cat: Category) => (
+                        <MenuItem key={cat.id} value={cat.id}>
+                            {cat.name}
+                        </MenuItem>
                     ))}
                 </Select>
                 <Box sx={{ display: 'flex', gap: 1, marginTop: 2 }}>
-                    <Button variant="contained" color="primary" onClick={handleSearch}>
+                    <Button variant="contained"
+                            color="primary" onClick={handleSearch}>
                         Поиск
                     </Button>
                     <Button color="secondary" onClick={handleReset}>
