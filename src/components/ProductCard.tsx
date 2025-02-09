@@ -17,12 +17,12 @@ interface ProductCardProps {
     id: number;
     name: string;
     description: string;
-    category: number; // Теперь здесь передается id категории
+    category: number;
     image?: string;
     quantity: number;
     unit: string;
-    onClick: () => void;   // Для открытия увеличенной версии
-    onDelete: () => void;  // Для удаления товара
+    onClick: () => void;
+    onDelete: () => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -36,14 +36,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
                                                      onClick,
                                                      onDelete,
                                                  }) => {
-    // Получаем список категорий из redux-хранилища
     const categories = useSelector((state: RootState) => state.categories.categories);
     const categoryName =
         categories.find((cat) => cat.id === category)?.name || 'Неизвестная категория';
 
     return (
         <Tooltip title={description} arrow>
-            {/* CardActionArea отвечает за клик по карточке для открытия модального окна */}
             <Card sx={{ maxWidth: 345, position: 'relative', backgroundColor: 'white', color: 'black' }}>
                 <CardActionArea onClick={onClick}>
                     <CardContent>
@@ -68,7 +66,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
                         </Typography>
                     </CardContent>
                 </CardActionArea>
-                {/* Кнопка для удаления товара, расположенная в правом верхнем углу */}
                 <Box sx={{ position: 'absolute', top: 0, right: 0 }}>
                     <IconButton
                         size="small"

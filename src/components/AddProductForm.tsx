@@ -11,7 +11,6 @@ interface AddProductFormProps {
 const AddProductForm: React.FC<AddProductFormProps> = ({ onClose }) => {
     const dispatch = useDispatch<AppDispatch>();
 
-    // Поля формы
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
@@ -21,8 +20,6 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onClose }) => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-
-        // Создаем новый товар; для простоты id генерируется с помощью Date.now()
         const newProduct: Product = {
             id: Date.now(),
             name,
@@ -57,7 +54,7 @@ const AddProductForm: React.FC<AddProductFormProps> = ({ onClose }) => {
                 required
             />
             <TextField
-                label="Категория"
+                label="id Категории"
                 variant="outlined"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}

@@ -14,7 +14,6 @@ const CategoriesPage: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
 
-    // Стейт для показа модального окна; если currentCategory равен null – добавление новой категории
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentCategory, setCurrentCategory] = useState<Category | null>(null);
 
@@ -34,11 +33,9 @@ const CategoriesPage: React.FC = () => {
 
     const handleSave = (name: string) => {
         if (currentCategory) {
-            // Обновление существующей категории
             dispatch(updateCategory({ id: currentCategory.id, name }));
         } else {
-            // Добавление новой категории
-            dispatch(addCategory({ id: Date.now(), name }));  // id можно задавать по-другому, здесь используем Date.now()
+            dispatch(addCategory({ id: Date.now(), name }));
         }
         setIsModalOpen(false);
     };
@@ -48,7 +45,7 @@ const CategoriesPage: React.FC = () => {
     };
 
     const handleBackClick = () => {
-        navigate(-1); // Переход назад
+        navigate(-1);
     };
 
     return (

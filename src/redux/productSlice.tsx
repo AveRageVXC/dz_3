@@ -2,10 +2,10 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import productsData from '../data/products.json';
 
 export interface Product {
-    id: number;               // Уникальный идентификатор товара
+    id: number;
     name: string;
     description: string;
-    category: number;         // Теперь вместо названия хранится id категории
+    category: number;
     quantity: number;
     unit: string;
     image?: string;
@@ -14,15 +14,12 @@ export interface Product {
 interface ProductState {
     products: Product[];
 }
-
-// Если в JSON-е поле category хранится как строка (название), производим преобразование в number.
-// Если данные уже обновлены, и там хранится id, то преобразование не повлияет.
 const productsWithId: Product[] = productsData.map((product, index) => ({
     id: index + 1,
     ...product,
     category:
         typeof product.category === 'string'
-            ? Number(product.category) // Преобразуем название в число (при условии, что название можно сопоставить с числовым id)
+            ? Number(product.category)
             : product.category,
 }));
 
@@ -46,7 +43,6 @@ const productSlice = createSlice({
         removeProduct(state, action: PayloadAction<number>) {
             state.products = state.products.filter(p => p.id !== action.payload);
         },
-        // Полная установка массива товаров (например, обновление данных с сервера)
         setProducts(state, action: PayloadAction<Product[]>) {
             state.products = action.payload;
         },

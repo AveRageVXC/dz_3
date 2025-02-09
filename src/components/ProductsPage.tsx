@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../redux/store';
-// import { setCategories, Category } from '../redux/categorySlice';
 import Sidebar from './Sidebar';
-import { v4 as uuidv4 } from 'uuid';
 
 const ProductsPage: React.FC = () => {
-    const dispatch = useDispatch<AppDispatch>();
     const products = useSelector((state: RootState) => state.products.products);
     const categories = useSelector((state: RootState) => state.categories.categories);
-
-    // Пример состояния и фильтрации товаров (логика фильтрации не детализирована)
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [filteredProducts, setFilteredProducts] = useState(products);
 
@@ -28,15 +23,12 @@ const ProductsPage: React.FC = () => {
 
     return (
         <div>
-            {/* Передаем категории из Redux в Sidebar */}
             <Sidebar
                 isOpen={isSidebarOpen}
                 onClose={() => setIsSidebarOpen(false)}
                 onFilter={handleFilter}
                 categories={categories}
             />
-
-            {/* Основной контент */}
             <div>
                 <button onClick={() => setIsSidebarOpen(true)}>Фильтры</button>
                 {filteredProducts.map((p) => (

@@ -10,7 +10,6 @@ interface EditProductFormProps {
 }
 
 const EditProductForm: React.FC<EditProductFormProps> = ({ product, onClose }) => {
-    // Локальное состояние для полей формы, предзаполненное данными товара
     const [name, setName] = useState(product.name);
     const [description, setDescription] =
         useState(product.description);
@@ -31,10 +30,8 @@ const EditProductForm: React.FC<EditProductFormProps> = ({ product, onClose }) =
             price,
         };
 
-        // Обновляем товар в Redux-хранилище
         dispatch(updateProduct(updatedProduct));
 
-        // Закрываем модальное окно
         onClose();
     };
 
@@ -57,7 +54,7 @@ const EditProductForm: React.FC<EditProductFormProps> = ({ product, onClose }) =
                 required
             />
             <TextField
-                label="Категория"
+                label="id Категории"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 required

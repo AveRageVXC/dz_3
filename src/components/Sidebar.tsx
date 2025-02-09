@@ -32,7 +32,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onFilter, onClose }) => {
     const [nonZeroQuantity, setNonZeroQuantity] = useState(false);
     const [category, setCategory] = useState<number | ''>('');
 
-    // Выбираем список категорий из redux-хранилища
     const categories = useSelector((state: RootState) => state.categories.categories);
 
     const handleSearch = () => {

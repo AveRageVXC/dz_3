@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-// Импортируем подготовленный список категорий из JSON
 import categoriesData from '../data/categories.json';
 
 export interface Category {
@@ -12,7 +11,6 @@ interface CategoryState {
 }
 
 const initialState: CategoryState = {
-    // Изначальное состояние категорий берётся из categories.json
     categories: categoriesData as Category[],
 };
 
@@ -32,7 +30,6 @@ const categorySlice = createSlice({
         removeCategory(state, action: PayloadAction<number>) {
             state.categories = state.categories.filter(cat => cat.id !== action.payload);
         },
-        // Полная установка списка категорий (например, после обновления)
         setCategories(state, action: PayloadAction<Category[]>) {
             state.categories = action.payload;
         },

@@ -2,12 +2,10 @@ import React from 'react';
 import { Box, Card, CardContent, Typography, Avatar } from '@mui/material';
 
 const UserProfile: React.FC = () => {
-    // Заглушка с данными пользователя
     const user = {
         username: 'Иван Иванов',
         email: 'ivan.ivanov@example.com',
         group: 'Студент',
-        // Placeholder для аватара (можно заменить на реальный URL)
         avatar: 'https://via.placeholder.com/150',
     };
 

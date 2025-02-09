@@ -8,11 +8,9 @@ import { RootState, AppDispatch } from '../redux/store';
 import { removeProduct } from '../redux/productSlice';
 
 const ProductDetails: React.FC = () => {
-    // Получаем идентификатор товара из параметров URL
     const { id } = useParams<{ id: string }>();
     const productId = Number(id);
 
-    // Ищем товар в Redux-хранилище
     const product = useSelector((state: RootState) =>
         state.products.products.find((p) => p.id === productId)
     );
@@ -25,7 +23,6 @@ const ProductDetails: React.FC = () => {
         return <Typography variant="h6">Товар не найден.</Typography>;
     }
 
-    // Открываем модальное окно для редактирования товара
     const openEditModal = () => {
         setModalContent(
             <EditProductForm
@@ -35,7 +32,6 @@ const ProductDetails: React.FC = () => {
         );
     };
 
-    // Обработчик удаления товара: удаляем товар и переходим на список товаров
     const handleDelete = () => {
         dispatch(removeProduct(product.id));
         navigate('/products');
@@ -43,7 +39,6 @@ const ProductDetails: React.FC = () => {
 
     return (
         <Box sx={{ padding: '20px' }}>
-            {/* Кнопка возврата на предыдущую страницу */}
             <Button
                 variant="outlined"
                 onClick={() => navigate(-1)}

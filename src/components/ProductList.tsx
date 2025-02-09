@@ -27,7 +27,6 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
     const [itemsPerPage, setItemsPerPage] = useState(5);
     const [modalContent, setModalContent] = useState<React.ReactNode | null>(null);
 
-    // Фильтрация товаров по заданным фильтрам
     const filteredProducts = products.filter((product) => {
         return (
             (filters.searchText === '' ||
@@ -36,8 +35,6 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
             (filters.category === '' || product.category === filters.category)
         );
     });
-
-    // Пагинация
     const paginatedProducts = filteredProducts.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
@@ -52,7 +49,6 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
         setCurrentPage(1);
     };
 
-    // При клике на карточку товара перенаправляем на страницу /products/:id
     const handleCardClick = (product: Product) => {
         navigate(`/products/${product.id}`)
     };
@@ -61,7 +57,6 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
         dispatch(removeProduct(id));
     };
 
-    // Открытие модальной формы добавления товара
     const openAddProductModal = () => {
         setModalContent(<AddProductForm onClose={() => setModalContent(null)} />);
     };

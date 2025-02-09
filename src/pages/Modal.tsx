@@ -38,7 +38,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ content, onClose }) => {
                 {content}
             </Paper>
         </Box>,
-        document.getElementById('modal-root') as HTMLElement // убедитесь, что в index.html есть элемент с id="modal-root"
+        document.getElementById('modal-root') as HTMLElement
     );
 };
 
